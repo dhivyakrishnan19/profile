@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhivyabharathi K — AI Readiness Lead, StartupTN</title>
+  <meta name="description" content="Dhivyabharathi K — Project Lead, AI Readiness at StartupTN. 8+ years spanning HR strategy, government operations, and hands-on AI product development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,800;1,9..144,300&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #07090e;
+      --bg-2:        #0c1019;
+      --bg-3:        #111722;
+      --border:      #1a2336;
+      --border-hi:   #273650;
+      --text-1:      #eef2fa;
+      --text-2:      #7b93b8;
+      --text-3:      #384e6a;
+      /* accent: teal-cyan — professional, distinct from purple, works on dark bg */
+      --acc:         #2dd4bf;
+      --acc-dim:     #0d2e2a;
+      --acc-glow:    rgba(45,212,191,0.08);
+      --acc-soft:    #99f6e4;
+      /* category colours */
+      --c-ai:        #2dd4bf;
+      --c-ai-dim:    #0d2e2a;
+      --c-auto:      #38bdf8;
+      --c-auto-dim:  #0c2030;
+      --c-hr:        #fb923c;
+      --c-hr-dim:    #2a1508;
+      --c-content:   #a78bfa;
+      --c-content-dim:#1e1640;
+      --green:       #4ade80;
+      --serif:       'Fraunces', Georgia, serif;
+      --sans:        'DM Sans', system-ui, sans-serif;
+      --mono:        'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text-1); font-family: var(--sans); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 2px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 58px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      background: rgba(7,9,14,0.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--text-1); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo em { color: var(--acc); font-style: italic; font-weight: 300; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 11.5px; color: var(--text-2); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-1); }
+    .nav-cta { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.05em; color: var(--bg); background: var(--acc); border-radius: 5px; padding: 0.38rem 1rem; text-decoration: none; transition: opacity 0.2s, transform 0.15s; }
+    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 3.5rem); }
+
+    /* ── HERO ── */
+    #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 80px; padding-bottom: 5rem; }
+    .pulse { width: 7px; height: 7px; background: var(--green); border-radius: 50%; animation: blink 2.4s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+    .hero-name { font-family: var(--serif); font-size: clamp(3.2rem, 8.5vw, 7rem); font-weight: 800; line-height: 0.92; color: var(--text-1); letter-spacing: -0.03em; margin-bottom: 1.2rem; }
+    .hero-name .ital { color: var(--acc); font-style: italic; font-weight: 300; }
+    .hero-role { font-family: var(--sans); font-size: clamp(1rem, 1.8vw, 1.2rem); font-weight: 300; color: var(--text-2); max-width: 580px; line-height: 1.8; margin-bottom: 2.8rem; }
+    .hero-role strong { color: var(--acc-soft); font-weight: 500; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn-fill { font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; background: var(--acc); color: var(--bg); padding: 0.75rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 500; transition: opacity 0.2s, transform 0.15s; border: none; cursor: pointer; display: inline-block; }
+    .btn-fill:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn-out { font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; color: var(--text-1); border: 1px solid var(--border-hi); padding: 0.75rem 1.8rem; border-radius: 6px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .btn-out:hover { border-color: var(--acc); background: var(--acc-glow); }
+
+    /* BENTO */
+    .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); margin-top: 3.5rem; }
+    .bc { background: var(--bg-2); padding: 1.5rem 1.8rem; transition: background 0.2s; }
+    .bc:hover { background: var(--bg-3); }
+    .bc-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--text-1); }
+    .bc-num .u { font-size: 1.4rem; color: var(--acc); }
+    .bc-lbl { font-family: var(--mono); font-size: 10px; color: var(--text-3); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.4rem; }
+    .bc.wide { grid-column: span 2; display: flex; align-items: center; gap: 1.2rem; }
+    .bc-icon { font-size: 2rem; flex-shrink: 0; }
+    .bc-wide-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.2rem; }
+    .bc-wide-sub { font-size: 12px; color: var(--text-2); line-height: 1.55; }
+
+    /* TICKER */
+    .ticker-strip { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.6rem 0; margin-top: 3.5rem; }
+    .ticker-track { display: flex; gap: 2.5rem; white-space: nowrap; animation: scroll 42s linear infinite; }
+    @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .ti { font-family: var(--mono); font-size: 10.5px; color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase; }
+    .ti::before { content: '◆'; color: var(--acc); margin-right: 0.6rem; font-size: 7px; vertical-align: middle; }
+
+    /* ── SECTION ── */
+    .section { padding: 5rem 0 0; }
+    .sec-head { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 1.2rem; }
+    .sec-eye { font-family: var(--mono); font-size: 11px; color: var(--acc); letter-spacing: 0.15em; text-transform: uppercase; flex-shrink: 0; }
+    .sec-title { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; color: var(--text-1); letter-spacing: -0.02em; line-height: 1; }
+
+    /* ── EXPERIENCE ── */
+    .exp-grid { display: grid; grid-template-columns: 220px 1fr; }
+    .exp-tabs { border-right: 1px solid var(--border); }
+    .exp-tab { display: block; padding: 1.1rem 1.5rem 1.1rem 0; cursor: pointer; border-right: 2px solid transparent; margin-right: -1px; transition: all 0.2s; }
+    .exp-tab:hover .etc { color: var(--text-1); }
+    .exp-tab.on { border-right-color: var(--acc); }
+    .exp-tab.on .etc { color: var(--acc-soft); }
+    .etc { font-family: var(--sans); font-size: 13px; font-weight: 500; color: var(--text-2); display: block; transition: color 0.2s; }
+    .etp { font-family: var(--mono); font-size: 10px; color: var(--text-3); margin-top: 0.2rem; }
+    .exp-body { padding-left: 3rem; }
+    .exp-pane { display: none; }
+    .exp-pane.on { display: block; }
+    .exp-ttl { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.1rem; line-height: 1.2; }
+    .exp-org { font-family: var(--mono); font-size: 12px; color: var(--acc); }
+    .exp-per { font-family: var(--mono); font-size: 10.5px; color: var(--text-3); margin: 0.4rem 0 1.6rem; }
+    .exp-ul { list-style: none; }
+    .exp-ul li { font-size: 14px; color: var(--text-2); line-height: 1.8; padding-left: 1.3rem; margin-bottom: 0.8rem; position: relative; }
+    .exp-ul li::before { content: '›'; position: absolute; left: 0; color: var(--acc); font-size: 16px; line-height: 1.6; }
+    .exp-ul strong { color: var(--text-1); font-weight: 500; }
+
+    /* ── PROJECTS ── */
+    .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 1.5rem; }
+    .proj-card { background: var(--bg-2); border: 1px solid var(--border); border-left-width: 3px; border-radius: 12px; padding: 1.8rem; position: relative; overflow: hidden; transition: border-color 0.25s, transform 0.25s; }
+    .proj-card:hover { transform: translateY(-3px); border-color: var(--border-hi); }
+    .proj-card.ai   { border-left-color: var(--c-ai); }
+    .proj-card.auto { border-left-color: var(--c-auto); }
+    .proj-card.hr   { border-left-color: var(--c-hr); }
+    .proj-card.cont { border-left-color: var(--c-content); }
+    .proj-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; gap: 0.5rem; }
+    .proj-icon { font-size: 1.7rem; flex-shrink: 0; }
+    .proj-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
+    .proj-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 4px; }
+    .ai   .proj-badge { background: var(--c-ai-dim);      color: var(--c-ai); }
+    .auto .proj-badge { background: var(--c-auto-dim);    color: var(--c-auto); }
+    .hr   .proj-badge { background: var(--c-hr-dim);      color: var(--c-hr); }
+    .cont .proj-badge { background: var(--c-content-dim); color: var(--c-content); }
+    .proj-link { font-family: var(--mono); font-size: 10px; color: var(--text-3); text-decoration: none; border: 1px solid var(--border); padding: 0.2rem 0.55rem; border-radius: 4px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+    .proj-link:hover { color: var(--acc); border-color: var(--acc); }
+    .proj-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.6rem; line-height: 1.3; }
+    .proj-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.75; margin-bottom: 1.2rem; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .ptag { font-family: var(--mono); font-size: 10.5px; background: var(--bg-3); color: var(--text-3); padding: 0.2rem 0.6rem; border-radius: 4px; border: 1px solid var(--border); }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .cert-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; display: flex; flex-direction: column; gap: 1rem; transition: border-color 0.2s, transform 0.2s; }
+    .cert-card:hover { border-color: var(--acc); transform: translateY(-2px); }
+    .cert-row1 { display: flex; align-items: center; justify-content: space-between; }
+    .cert-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.22rem 0.7rem; border-radius: 4px; font-weight: 500; }
+    .cb-nv { background: rgba(118,185,0,0.14); color: #76b900; border: 1px solid rgba(118,185,0,0.25); }
+    .cb-bi { background: rgba(45,212,191,0.14); color: var(--acc); border: 1px solid rgba(45,212,191,0.25); }
+    .cb-cl { background: var(--acc-dim); color: var(--acc-soft); border: 1px solid rgba(45,212,191,0.18); }
+    .cert-date { font-family: var(--mono); font-size: 10px; color: var(--text-3); }
+    .cert-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--text-1); line-height: 1.3; }
+    .cert-org { font-size: 13px; color: var(--text-2); }
+    .cert-verify { font-family: var(--mono); font-size: 10.5px; color: var(--acc); text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem; margin-top: auto; transition: color 0.2s; }
+    .cert-verify:hover { color: var(--acc-soft); }
+    .cert-verify::after { content: '↗'; font-size: 11px; }
+
+    /* ── SKILLS ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+    .skill-box { background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 1.6rem; transition: border-color 0.2s; }
+    .skill-box:hover { border-color: var(--border-hi); }
+    .skill-cat { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--acc); margin-bottom: 1rem; }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .sp { font-family: var(--mono); font-size: 11px; background: var(--bg-3); color: var(--text-2); padding: 0.28rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); }
+
+    /* ── EDUCATION ── */
+    .edu-list { display: flex; flex-direction: column; }
+    .edu-row { display: flex; gap: 2.5rem; padding: 1.8rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .edu-yr { font-family: var(--mono); font-size: 11px; color: var(--text-3); min-width: 110px; padding-top: 4px; }
+    .edu-deg { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.2rem; line-height: 1.3; }
+    .edu-school { font-size: 13px; color: var(--acc); }
+
+    /* ── ACHIEVEMENTS ── */
+    .ach-list { display: flex; flex-direction: column; }
+    .ach-row { display: flex; gap: 2rem; padding: 1.6rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .ach-pill { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; padding: 0.22rem 0.65rem; border-radius: 4px; margin-top: 4px; }
+    .ap-p { background: var(--acc-dim);   color: var(--acc-soft); }
+    .ap-r { background: var(--c-auto-dim); color: var(--c-auto); }
+    .ap-a { background: var(--c-hr-dim);   color: var(--c-hr); }
+    .ach-name { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.3rem; }
+    .ach-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.75; }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; }
+    .contact-intro { font-size: 15px; color: var(--text-2); line-height: 1.85; }
+    .contact-deets { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 2rem; }
+    .cd-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.2rem; }
+    .cd-val { font-size: 14px; color: var(--text-1); }
+    .cd-val a { color: var(--acc); text-decoration: none; }
+    .cd-val a:hover { color: var(--acc-soft); }
+    .cf { display: flex; flex-direction: column; gap: 1.2rem; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cf-grp { display: flex; flex-direction: column; gap: 0.4rem; }
+    .cf-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+    .cf-inp, .cf-ta, .cf-sel { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-1); padding: 0.75rem 1rem; font-family: var(--sans); font-size: 14px; outline: none; transition: border-color 0.2s; appearance: none; width: 100%; }
+    .cf-inp:focus, .cf-ta:focus, .cf-sel:focus { border-color: var(--acc); }
+    .cf-ta { resize: vertical; min-height: 115px; }
+    .cf-sel option { background: #0c1019; }
+
+    /* ── FOOTER ── */
+    footer { max-width: 1120px; margin: 5rem auto 0; padding: 2rem clamp(1.5rem, 5vw, 3.5rem); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .f-l { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+    .f-r { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+    .f-r span { color: var(--acc); }
+
+
+    /* ══════════════════════════════════
+       ANIMATION SYSTEM
+    ══════════════════════════════════ */
+
+    /* Page load fade */
+    body { animation: pageIn 0.6s ease both; }
+    @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Scroll reveal variants */
+    .rv        { opacity: 0; transform: translateY(32px); transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .rv.in     { opacity: 1; transform: translateY(0); }
+    .rv-left   { opacity: 0; transform: translateX(-40px); transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .rv-left.in  { opacity: 1; transform: translateX(0); }
+    .rv-right  { opacity: 0; transform: translateX(40px); transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
+    .rv-right.in { opacity: 1; transform: translateX(0); }
+    .rv-scale  { opacity: 0; transform: scale(0.92); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .rv-scale.in { opacity: 1; transform: scale(1); }
+
+    /* Stagger children */
+    .stagger > * { opacity: 0; transform: translateY(24px); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+    .stagger.in > *:nth-child(1)  { transition-delay: 0.05s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(2)  { transition-delay: 0.12s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(3)  { transition-delay: 0.19s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(4)  { transition-delay: 0.26s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(5)  { transition-delay: 0.33s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(6)  { transition-delay: 0.40s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(7)  { transition-delay: 0.47s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(8)  { transition-delay: 0.54s; opacity:1; transform:translateY(0); }
+    .stagger.in > *:nth-child(9)  { transition-delay: 0.61s; opacity:1; transform:translateY(0); }
+
+    /* Hero entrance sequence */
+    .hero-name   { animation: slideUp  0.9s 0.35s cubic-bezier(0.16,1,0.3,1) both; }
+    .hero-role   { animation: fadeSlide 0.8s 0.55s cubic-bezier(0.16,1,0.3,1) both; }
+    .hero-ctas   { animation: fadeSlide 0.7s 0.7s  cubic-bezier(0.16,1,0.3,1) both; }
+    .hero-photo-col { animation: slideRight 1s 0.4s cubic-bezier(0.16,1,0.3,1) both; }
+    @keyframes slideDown  { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes slideUp    { from { opacity:0; transform:translateY(40px);  } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeSlide  { from { opacity:0; transform:translateY(20px);  } to { opacity:1; transform:translateY(0); } }
+    @keyframes slideRight { from { opacity:0; transform:translateX(50px);  } to { opacity:1; transform:translateX(0); } }
+
+    /* Bento cells stagger */
+    .bento .bc { opacity: 0; transform: translateY(20px) scale(0.97); transition: opacity 0.5s, transform 0.5s, background 0.2s; }
+    .bento.in .bc { opacity: 1; transform: translateY(0) scale(1); }
+    .bento.in .bc:nth-child(1) { transition-delay: 0.05s; }
+    .bento.in .bc:nth-child(2) { transition-delay: 0.12s; }
+    .bento.in .bc:nth-child(3) { transition-delay: 0.19s; }
+    .bento.in .bc:nth-child(4) { transition-delay: 0.26s; }
+    .bento.in .bc:nth-child(5) { transition-delay: 0.33s; }
+    .bento.in .bc:nth-child(6) { transition-delay: 0.40s; }
+
+    /* Number counter animation */
+    .bc-num { transition: color 0.3s; }
+    .bento.in .bc-num { color: var(--text-1); }
+
+    /* Nav link underline slide */
+    .nav-links a { position: relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background: var(--acc); transition: width 0.25s ease; }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* Project card — lift + glow */
+    .proj-card {
+      transition: border-color 0.3s, transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
+    }
+    .proj-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 0 1px var(--border-hi);
+    }
+    .proj-card.ai:hover   { box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 24px rgba(45,212,191,0.12); }
+    .proj-card.auto:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 24px rgba(56,189,248,0.12); }
+    .proj-card.hr:hover   { box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 24px rgba(251,146,60,0.12); }
+    .proj-card.cont:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 24px rgba(167,139,250,0.12); }
+
+    /* Cert card hover */
+    .cert-card { transition: border-color 0.3s, transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s; }
+    .cert-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.3), 0 0 20px rgba(45,212,191,0.1); }
+
+    /* Skill pill hover */
+    .sp { transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; }
+    .sp:hover { background: var(--acc-dim); color: var(--acc-soft); border-color: var(--acc); transform: translateY(-1px); }
+
+    /* Section title underline draw */
+    .sec-title { position: relative; display: inline-block; }
+    .sec-title::after {
+      content: ''; position: absolute; bottom: -6px; left: 0;
+      height: 2px; width: 0; background: var(--acc);
+      transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+      border-radius: 1px;
+    }
+    .sec-head.in .sec-title::after { width: 100%; }
+
+    /* Photo frame shimmer */
+    .hero-photo-frame::before {
+      animation: shimmer 4s ease-in-out infinite alternate;
+    }
+    @keyframes shimmer {
+      from { opacity: 0.2; transform: rotate(-1deg) scale(1); }
+      to   { opacity: 0.5; transform: rotate(1deg) scale(1.02); }
+    }
+
+    /* Floating badge bob */
+    .hero-photo-badge {
+      animation: bob 3s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
+    }
+
+    /* CTA button pulse ring on hover */
+    .btn-fill { position: relative; overflow: visible; }
+    .btn-fill::after {
+      content: ''; position: absolute; inset: -3px; border-radius: 8px;
+      border: 2px solid var(--acc); opacity: 0;
+      transform: scale(0.95); transition: opacity 0.3s, transform 0.3s;
+    }
+    .btn-fill:hover::after { opacity: 0.4; transform: scale(1.04); }
+
+    /* Experience tab active indicator slide */
+    .exp-tab { transition: background 0.2s; border-radius: 4px 0 0 4px; }
+    .exp-tab:hover { background: var(--bg-2); }
+
+    /* Ticker pause on hover */
+    .ticker-strip:hover .ticker-track { animation-play-state: paused; }
+
+    /* Scroll progress bar */
+    #progress-bar {
+      position: fixed; top: 58px; left: 0; height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--acc), var(--acc-soft));
+      z-index: 300; transition: width 0.1s linear;
+      box-shadow: 0 0 8px rgba(45,212,191,0.5);
+    }
+
+    /* Active nav highlight */
+    .nav-links a.active { color: var(--acc); }
+    .nav-links a.active::after { width: 100%; }
+
+    /* Background grid texture */
+    #bg-grid {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(45,212,191,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,212,191,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 30%, transparent 100%);
+    }
+
+
+
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bc.wide { grid-column: span 2; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .exp-tabs { border-right: none; border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; padding-bottom: 0; margin-bottom: 2rem; }
+      .exp-tab { padding: 0.7rem 1rem; border-right: none; border-bottom: 2px solid transparent; margin-right: 0; margin-bottom: -1px; white-space: nowrap; }
+      .exp-tab.on { border-right-color: transparent; border-bottom-color: var(--acc); }
+      .exp-body { padding-left: 0; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cf-row { grid-template-columns: 1fr; }
+      .ach-row { flex-direction: column; gap: 0.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; }
+      .rv { opacity: 1; transform: none; transition: none; }
+      .pulse { animation: none; }
+    }
+
+    /* ── HERO PHOTO ── */
+    .hero-split { display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center; }
+    .hero-photo-col { display: flex; justify-content: flex-end; align-items: flex-end; }
+    .hero-photo-frame {
+      position: relative; width: 340px; height: 400px; flex-shrink: 0;
+    }
+    .hero-photo-frame::before {
+      content: ''; position: absolute; inset: -1px;
+      border-radius: 24px 24px 80px 24px;
+      background: linear-gradient(135deg, var(--acc) 0%, transparent 60%);
+      opacity: 0.35; z-index: 0;
+    }
+    .hero-photo-frame::after {
+      content: ''; position: absolute;
+      bottom: -12px; right: -12px; left: 12px; top: 12px;
+      border-radius: 24px 24px 80px 24px;
+      border: 1px solid var(--border);
+      z-index: 0;
+    }
+    .hero-photo-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      border-radius: 24px 24px 80px 24px;
+      position: relative; z-index: 1;
+      display: block;
+    }
+    .hero-photo-badge {
+      position: absolute; bottom: 1.2rem; left: -1.2rem; z-index: 2;
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.7rem 1rem;
+      display: flex; align-items: center; gap: 0.6rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero-photo-badge-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: blink 2.4s ease-in-out infinite; flex-shrink: 0; }
+    .hero-photo-badge-text { font-family: var(--mono); font-size: 10px; color: var(--text-2); letter-spacing: 0.06em; line-height: 1.4; }
+    .hero-photo-badge-text strong { color: var(--acc-soft); display: block; font-size: 11px; }
+    @media (max-width: 900px) {
+      .hero-split { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-photo-col { justify-content: center; }
+      .hero-photo-frame { width: 260px; height: 310px; }
+    }
+
+    /* ══════════════════════════════════
+       LIGHT MODE — Claude-inspired theme
+       Warm cream · coral-orange accent
+    ══════════════════════════════════ */
+    [data-theme="light"] {
+      --bg:          #f9f6f1;
+      --bg-2:        #f2ede6;
+      --bg-3:        #ede6dc;
+      --border:      #ddd5c8;
+      --border-hi:   #c9bfb2;
+      --text-1:      #1a1612;
+      --text-2:      #5c4f42;
+      --text-3:      #9c8c7e;
+      --acc:         #d97706;
+      --acc-dim:     #fef3c7;
+      --acc-glow:    rgba(217,119,6,0.1);
+      --acc-soft:    #b45309;
+      --c-ai:        #d97706;
+      --c-ai-dim:    #fef3c7;
+      --c-auto:      #0891b2;
+      --c-auto-dim:  #e0f2fe;
+      --c-hr:        #dc2626;
+      --c-hr-dim:    #fee2e2;
+      --c-content:   #7c3aed;
+      --c-content-dim:#ede9fe;
+      --green:       #16a34a;
+    }
+    [data-theme="light"] body { background: var(--bg); }
+    [data-theme="light"] nav { background: rgba(249,246,241,0.92); }
+    [data-theme="light"] .nav-logo { color: var(--text-1); }
+    [data-theme="light"] .hero-name { color: var(--text-1); }
+    [data-theme="light"] .hero-name .ital { color: var(--acc); }
+    [data-theme="light"] .bento { background: var(--border); }
+    [data-theme="light"] .ticker-strip { border-color: var(--border); }
+    [data-theme="light"] #bg-grid {
+      background-image:
+        linear-gradient(rgba(217,119,6,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(217,119,6,0.06) 1px, transparent 1px);
+    }
+    [data-theme="light"] .proj-card,
+    [data-theme="light"] .skill-box,
+    [data-theme="light"] .cert-card,
+    [data-theme="light"] .bc { box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    [data-theme="light"] .cf-inp,
+    [data-theme="light"] .cf-ta,
+    [data-theme="light"] .cf-sel { color: var(--text-1); }
+    [data-theme="light"] .sp { color: var(--text-2); }
+    [data-theme="light"] .hero-photo-frame::before {
+      background: linear-gradient(135deg, var(--acc) 0%, transparent 60%);
+      opacity: 0.25;
+    }
+    [data-theme="light"] .hero-photo-badge {
+      background: #fff;
+      border-color: var(--border);
+    }
+
+    /* ── THEME TOGGLE BUTTON ── */
+    #theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg-2);
+      cursor: pointer; transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      flex-shrink: 0; margin-left: 0.8rem;
+    }
+    #theme-toggle:hover { border-color: var(--acc); background: var(--acc-glow); transform: rotate(15deg); }
+    #theme-toggle svg { width: 16px; height: 16px; transition: opacity 0.2s; }
+    .icon-moon { display: block; }
+    .icon-sun  { display: none;  }
+    [data-theme="light"] .icon-moon { display: none;  }
+    [data-theme="light"] .icon-sun  { display: block; }
+
+    /* Smooth theme transition */
+    body, nav, .bc, .proj-card, .skill-box, .cert-card, .cf-inp, .cf-ta, .cf-sel,
+    .exp-tabs, .exp-body, .ach-row, .edu-row, .ticker-strip, #bg-grid {
+      transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<div id="bg-grid"></div>
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Dhivya<em>bharathi</em></a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:0.8rem;">
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+      <!-- Moon icon (shown in dark mode) -->
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#7b93b8;">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <!-- Sun icon (shown in light mode) -->
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#d97706;">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-split">
+      <div class="hero-text-col">
+        <h1 class="hero-name">Dhivya<br><span class="ital">bharathi K</span></h1>
+        <p class="hero-role">
+          <strong>8+ years</strong> spanning government HR, program management &amp; hands-on AI product development.<br>
+          I build the systems organisations need to actually adopt AI — from policy frameworks and readiness benchmarks
+          to deployed tools, agentic workflows, and live SaaS products. Based in Tamil Nadu.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-fill">View Projects</a>
+          <a href="#contact" class="btn-out">Say Hello</a>
+        </div>
+      </div>
+      <div class="hero-photo-col">
+        <div class="hero-photo-frame">
+          <img class="hero-photo-img" src="profile.jpg" alt="Dhivyabharathi K" />
+          <div class="hero-photo-badge">
+            <span class="hero-photo-badge-dot"></span>
+            <div class="hero-photo-badge-text">
+              <strong>Available</strong>
+              Project Lead · StartupTN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento" id="bento-grid">
+      <div class="bc"><div class="bc-num">8<span class="u">+</span></div><div class="bc-lbl">Years Experience</div></div>
+      <div class="bc"><div class="bc-num">10<span class="u">+</span></div><div class="bc-lbl">AI Tools Shipped</div></div>
+      <div class="bc"><div class="bc-num">5<span class="u">+</span></div><div class="bc-lbl">Orgs Impacted</div></div>
+      <div class="bc"><div class="bc-num">3</div><div class="bc-lbl">Live Deployments</div></div>
+      <div class="bc wide">
+        <div class="bc-icon">🤖</div>
+        <div>
+          <div class="bc-wide-title">Claude + GPT-4o · Production</div>
+          <div class="bc-wide-sub">AI Readiness Reports · Agentic workflows · Workshop games · Tamil chatbot · Meme Studio · CV SaaS</div>
+        </div>
+      </div>
+      <div class="bc wide">
+        <div class="bc-icon">🏛️</div>
+        <div>
+          <div class="bc-wide-title">Government Operations · Expert</div>
+          <div class="bc-wide-sub">Board files · G.O. references · Policy drafting · HR committee notes · Procurement · Official correspondence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker-strip">
+      <div class="ticker-track" aria-hidden="true">
+        <span class="ti">Claude API</span><span class="ti">AI Readiness</span><span class="ti">PULSE Agents</span><span class="ti">React</span><span class="ti">Google Apps Script</span><span class="ti">Next.js</span><span class="ti">HR Automation</span><span class="ti">Policy Drafting</span><span class="ti">Supabase</span><span class="ti">Vercel</span><span class="ti">TANSEED</span><span class="ti">StartupTN</span><span class="ti">Prompt Engineering</span><span class="ti">Generative AI</span><span class="ti">NVIDIA</span><span class="ti">Tamil Nadu</span>
+        <span class="ti">Claude API</span><span class="ti">AI Readiness</span><span class="ti">PULSE Agents</span><span class="ti">React</span><span class="ti">Google Apps Script</span><span class="ti">Next.js</span><span class="ti">HR Automation</span><span class="ti">Policy Drafting</span><span class="ti">Supabase</span><span class="ti">Vercel</span><span class="ti">TANSEED</span><span class="ti">StartupTN</span><span class="ti">Prompt Engineering</span><span class="ti">Generative AI</span><span class="ti">NVIDIA</span><span class="ti">Tamil Nadu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Career</span><h2 class="sec-title">Experience</h2></div>
+    <div class="exp-grid">
+      <div class="exp-tabs rv-left" role="tablist">
+        <div class="exp-tab on" role="tab" data-p="e1" tabindex="0"><span class="etc">StartupTN</span><span class="etp">Jun 2023 — Present</span></div>
+        <div class="exp-tab" role="tab" data-p="e2" tabindex="0"><span class="etc">Ayyan Foundation</span><span class="etp">Sep 2015 — Sep 2018</span></div>
+        <div class="exp-tab" role="tab" data-p="e3" tabindex="0"><span class="etc">Anbu Paalam</span><span class="etp">Jul 2019 — Jun 2020</span></div>
+        <div class="exp-tab" role="tab" data-p="e4" tabindex="0"><span class="etc">Munu Adhi Trust</span><span class="etp">Oct 2013 — Sep 2015</span></div>
+        <div class="exp-tab" role="tab" data-p="e5" tabindex="0"><span class="etc">TMG College</span><span class="etp">Jul — Sep 2013</span></div>
+      </div>
+      <div class="exp-body rv-right">
+        <div class="exp-pane on" id="e1">
+          <p class="exp-ttl">Project Lead — AI Readiness &amp; HR Operations</p>
+          <p class="exp-org">Tamilnadu Startup and Innovation Mission (StartupTN)</p>
+          <p class="exp-per">Jun 2023 — Present · Nandanam, Chennai</p>
+          <ul class="exp-ul">
+            <li>Leading <strong>AI Readiness</strong> across StartupTN — benchmarked 55 staff at 54% average automation exposure and designed the org's first 2-day AI training programme built entirely around internally-shipped tools.</li>
+            <li>Built and deployed the <strong>AI Readiness Report Generator</strong> — Next.js + Claude API app that ingests performance review PDFs and outputs replaceability scores, task cluster breakdowns, AI tool stack recommendations, and phased roadmaps via a secure Vercel proxy.</li>
+            <li>Shipped <strong>WorkMoat.life</strong> — a live public SaaS at ₹9 that analyses uploaded CVs using Claude, delivers a full PDF career-moat diagnostic via SendGrid, and processes payments through Razorpay. "Know your moat. Defend your career."</li>
+            <li>Built the <strong>StartupTN Visitor Management System</strong> — visitor registration, event check-in, and meeting hall booking, deployed on Vercel.</li>
+            <li>Designed the <strong>PULSE AI Agent Ecosystem</strong> — six agents covering news intelligence, TANSEED deal flow, SC/ST fund tracking, and TANICORN research for StartupTN's investment operations.</li>
+            <li>Created the <strong>AI vs Humans Challenge</strong> — a 5-game React workshop suite powered by Claude and gpt-image-1, with host dashboard and live scoreboard for innovation events.</li>
+            <li>Built a <strong>Tamil–English multilingual chatbot</strong> using Claude's native language detection and an embedded knowledge base covering TANSEED 6.0, iDEX, and EDII.</li>
+            <li>Authored the <strong>IIR Policy &amp; Organisation Design</strong> framework and built the full HR Automation Suite on Google Apps Script — Leave/OD approvals, 360° evaluation, and GPS attendance tracking.</li>
+            <li>Regularly prepares <strong>Board files, office notes, G.O. references, procurement reports</strong> and official correspondence for leadership.</li>
+          </ul>
+        </div>
+        <div class="exp-pane" id="e2">
+          <p class="exp-ttl">Program Manager</p>
+          <p class="exp-org">Ayyan Foundation</p>
+          <p class="exp-per">Sep 2015 — Sep 2018 · Guindy, Chennai</p>
+          <ul class="exp-ul">
+            <li>Organised all program activities aligned to mission; developed budgets and operating plans for sustained delivery.</li>
+            <li>Wrote program funding proposals guaranteeing uninterrupted service delivery and resource continuity.</li>
+            <li>Ensured targets met across quality, safety, and team performance; produced accurate status reports for leadership and stakeholders.</li>
+          </ul>
+        </div>
+        <div class="exp-pane" id="e3">
+          <p class="exp-ttl">Project Associate</p>
+          <p class="exp-org">Anbu Paalam (News)</p>
+          <p class="exp-per">Jul 2019 — Jun 2020 · Chennai</p>
+          <ul class="exp-ul">
+            <li>Coordinated meetings and conferences; documented key decisions and tracked follow-ups on actions and budgets.</li>
+            <li>Maintained pending lists, agendas, and project admin records; assisted in fundraising and social media promotion.</li>
+          </ul>
+        </div>
+        <div class="exp-pane" id="e4">
+          <p class="exp-ttl">Project Coordinator → Faculty</p>
+          <p class="exp-org">Munu Adhi Trust</p>
+          <p class="exp-per">Oct 2013 — Sep 2015 · Tambaram, Chennai</p>
+          <ul class="exp-ul">
+            <li>Organised training programs, events, and budgets; managed public relations and higher education counselling for beneficiaries.</li>
+            <li>Conducted life skills, computer literacy, and programming training including aptitude and personality development.</li>
+            <li>Taught Higher Secondary Computer Science and Mathematics; generated daily performance and syllabus reports.</li>
+          </ul>
+        </div>
+        <div class="exp-pane" id="e5">
+          <p class="exp-ttl">Faculty &amp; Lab Technician</p>
+          <p class="exp-org">TMG Arts and Science College</p>
+          <p class="exp-per">Jul 2013 — Sep 2013 · Chennai</p>
+          <ul class="exp-ul">
+            <li>Handled C and C++ instruction for undergraduates; assisted students in computer lab practical sessions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Built</span><h2 class="sec-title">Projects</h2></div>
+    <div class="proj-grid stagger" id="proj-grid">
+
+      <!-- WorkMoat — featured first as live public product -->
+      <div class="proj-card ai">
+        <div class="proj-top">
+          <span class="proj-icon">🏰</span>
+          <div class="proj-meta">
+            <span class="proj-badge">Live SaaS</span>
+            <a href="https://workmoat.life" target="_blank" rel="noopener" class="proj-link">workmoat.life ↗</a>
+          </div>
+        </div>
+        <h3 class="proj-name">WorkMoat.life — CV Career Diagnostic</h3>
+        <p class="proj-desc">Public SaaS at ₹9. Upload your CV — Claude analyses it and emails you a full career-moat diagnostic: AI displacement scores, task automation risk, 6-skill upskilling roadmap, 90-day action plan, and a branded PDF report. Pay-first via Razorpay, report delivered by SendGrid. "Know your moat. Defend your career."</p>
+        <div class="proj-tags"><span class="ptag">Python/Flask</span><span class="ptag">Claude API</span><span class="ptag">Razorpay</span><span class="ptag">SendGrid</span><span class="ptag">Render</span></div>
+      </div>
+
+      <div class="proj-card ai">
+        <div class="proj-top">
+          <span class="proj-icon">📊</span>
+          <div class="proj-meta">
+            <span class="proj-badge">AI Tool</span>
+            <a href="https://startuptn-visitor-pi-one.vercel.app" target="_blank" rel="noopener" class="proj-link">Live ↗</a>
+          </div>
+        </div>
+        <h3 class="proj-name">StartupTN Visitor Management System</h3>
+        <p class="proj-desc">Full visitor management system for StartupTN's Nandanam office — visitor registration with QR-based check-in, event coordination, and meeting hall booking. Built on React and deployed on Vercel for daily operational use across the organisation.</p>
+        <div class="proj-tags"><span class="ptag">React</span><span class="ptag">Google Sheets</span><span class="ptag">QR Check-in</span><span class="ptag">Vercel</span></div>
+      </div>
+
+      <div class="proj-card auto">
+        <div class="proj-top">
+          <span class="proj-icon">🏢</span>
+          <div class="proj-meta">
+            <span class="proj-badge">Automation</span>
+            <a href="https://startuptn-visitor-pi-one.vercel.app" target="_blank" rel="noopener" class="proj-link">Live ↗</a>
+          </div>
+        </div>
+        <h3 class="proj-name">StartupTN Visitor Management System</h3>
+        <p class="proj-desc">Full visitor management system for StartupTN's office — visitor registration, event check-in, and meeting hall booking. Built and deployed on Vercel for daily operational use.</p>
+        <div class="proj-tags"><span class="ptag">React</span><span class="ptag">Vercel</span><span class="ptag">Google Sheets</span></div>
+      </div>
+
+      <div class="proj-card ai">
+        <div class="proj-top">
+          <span class="proj-icon">🎮</span>
+          <div class="proj-meta"><span class="proj-badge">AI Tool</span><span class="proj-link">Workshop</span></div>
+        </div>
+        <h3 class="proj-name">AI vs Humans Challenge</h3>
+        <p class="proj-desc">5-game live workshop suite — Charades, Image Prompt Guessing (gpt-image-1), Story Building, Logo Creation, Fact or Fiction. Claude handles clue generation, judging, and story continuation. Host dashboard with tension-meter scoreboard for projected play.</p>
+        <div class="proj-tags"><span class="ptag">React</span><span class="ptag">Claude API</span><span class="ptag">gpt-image-1</span><span class="ptag">Node Proxy</span></div>
+      </div>
+
+      <div class="proj-card ai">
+        <div class="proj-top">
+          <span class="proj-icon">🤖</span>
+          <div class="proj-meta"><span class="proj-badge">AI Tool</span><span class="proj-link">Internal</span></div>
+        </div>
+        <h3 class="proj-name">PULSE AI Agent Ecosystem</h3>
+        <p class="proj-desc">Six-agent system for StartupTN's investment operations — News Curation, TANSEED deal flow, SC/ST Fund tracking, TANICORN research. Structured JSON outputs feed live leadership dashboards.</p>
+        <div class="proj-tags"><span class="ptag">Claude API</span><span class="ptag">React</span><span class="ptag">Supabase</span><span class="ptag">Next.js</span></div>
+      </div>
+
+      <div class="proj-card ai">
+        <div class="proj-top">
+          <span class="proj-icon">🗣️</span>
+          <div class="proj-meta"><span class="proj-badge">AI Tool</span><span class="proj-link">Internal</span></div>
+        </div>
+        <h3 class="proj-name">Tamil–English AI Chatbot</h3>
+        <p class="proj-desc">Multilingual assistant for StartupTN scheme queries — TANSEED 6.0, iDEX, EDII. Claude's native Tamil detection handles both languages without separate routing logic. Knowledge base embedded in the system prompt for a fast v1.</p>
+        <div class="proj-tags"><span class="ptag">Claude API</span><span class="ptag">Tamil NLP</span><span class="ptag">Next.js</span><span class="ptag">Vercel</span></div>
+      </div>
+
+      <div class="proj-card cont">
+        <div class="proj-top">
+          <span class="proj-icon">😂</span>
+          <div class="proj-meta"><span class="proj-badge">Content</span><span class="proj-link">Netlify</span></div>
+        </div>
+        <h3 class="proj-name">Tamil AI Meme Studio</h3>
+        <p class="proj-desc">Internal culture tool — GPT-4o Vision reads uploaded photo, returns Tanglish captions in JSON, HTML Canvas renders authentic Tamil meme formatting (bold strokes, dark gradient overlays). Five styles: Tamil Classic, Two Panel, Tamil Poster, Pixar, Office Comic.</p>
+        <div class="proj-tags"><span class="ptag">React</span><span class="ptag">GPT-4o Vision</span><span class="ptag">gpt-image-1</span><span class="ptag">HTML Canvas</span></div>
+      </div>
+
+      <div class="proj-card auto">
+        <div class="proj-top">
+          <span class="proj-icon">📋</span>
+          <div class="proj-meta"><span class="proj-badge">Automation</span><span class="proj-link">Internal</span></div>
+        </div>
+        <h3 class="proj-name">HR Automation Suite</h3>
+        <p class="proj-desc">Three interconnected Google Apps Script systems: Leave/OD/Permission approvals with email routing and approve-decline buttons; 360° performance evaluation with 7-criteria weighted scoring and auto peer assignment; mobile GPS attendance tracker with role-based access.</p>
+        <div class="proj-tags"><span class="ptag">Google Apps Script</span><span class="ptag">Google Sheets</span><span class="ptag">Gmail API</span><span class="ptag">GPS</span></div>
+      </div>
+
+      <div class="proj-card hr">
+        <div class="proj-top">
+          <span class="proj-icon">🏛️</span>
+          <div class="proj-meta"><span class="proj-badge">HR &amp; Policy</span><span class="proj-link">Internal</span></div>
+        </div>
+        <h3 class="proj-name">IIR Policy &amp; Org Design</h3>
+        <p class="proj-desc">Authored StartupTN's foundational HR governance framework — IIR Policy, Organisation Design, Promotion Policy, Increment Policy, Appraisal frameworks, and Internship Guidelines. Also handles Board files, G.O. references, and procurement documentation.</p>
+        <div class="proj-tags"><span class="ptag">Policy Drafting</span><span class="ptag">Org Design</span><span class="ptag">HR Governance</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Learning</span><h2 class="sec-title">Certifications</h2></div>
+    <div class="cert-grid stagger" id="cert-grid">
+      <div class="cert-card">
+        <div class="cert-row1"><span class="cert-badge cb-nv">NVIDIA · Coursera</span><span class="cert-date">Dec 9, 2025</span></div>
+        <div class="cert-name">AI Infrastructure and Operations Fundamentals</div>
+        <div class="cert-org">Authorized by NVIDIA Training · Verified on Coursera</div>
+        <a href="https://coursera.org/verify/TAEJFNRMTO25" target="_blank" rel="noopener" class="cert-verify">Verify certificate</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-row1"><span class="cert-badge cb-bi">Board Infinity · Coursera</span><span class="cert-date">Dec 7, 2025</span></div>
+        <div class="cert-name">Generative AI in HR — Impact and Application of Gen AI</div>
+        <div class="cert-org">Authorized by Board Infinity · Verified on Coursera</div>
+        <a href="https://coursera.org/verify/6Y1NC2W64QSS" target="_blank" rel="noopener" class="cert-verify">Verify certificate</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-row1"><span class="cert-badge cb-cl">CompTIA</span><span class="cert-date">Earlier</span></div>
+        <div class="cert-name">A+ and N+ Certification</div>
+        <div class="cert-org">Hardware (A+) and Networking (N+) fundamentals</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-row1"><span class="cert-badge cb-cl">Accord Info Matrix</span><span class="cert-date">Earlier</span></div>
+        <div class="cert-name">Software Testing — Full Course</div>
+        <div class="cert-org">Chennai · All core QA and manual testing concepts</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-row1"><span class="cert-badge cb-cl">Government Board</span><span class="cert-date">Earlier</span></div>
+        <div class="cert-name">Computer Typing — Tamil &amp; English</div>
+        <div class="cert-org">Junior grade · First Class with Distinction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Capabilities</span><h2 class="sec-title">Skills</h2></div>
+    <div class="skills-grid stagger" id="skills-grid">
+      <div class="skill-box"><div class="skill-cat">AI Development</div><div class="skill-pills"><span class="sp">Claude / Anthropic API</span><span class="sp">GPT-4o / OpenAI API</span><span class="sp">Prompt Engineering</span><span class="sp">Agentic Systems</span><span class="sp">PDF Analysis</span><span class="sp">gpt-image-1</span></div></div>
+      <div class="skill-box"><div class="skill-cat">Frontend &amp; Fullstack</div><div class="skill-pills"><span class="sp">React</span><span class="sp">Next.js</span><span class="sp">HTML Canvas</span><span class="sp">Supabase</span><span class="sp">Vercel</span><span class="sp">Netlify</span></div></div>
+      <div class="skill-box"><div class="skill-cat">Automation &amp; Backend</div><div class="skill-pills"><span class="sp">Google Apps Script</span><span class="sp">Google Sheets API</span><span class="sp">Gmail API</span><span class="sp">Python / Flask</span><span class="sp">Node.js</span><span class="sp">Razorpay</span><span class="sp">SendGrid</span></div></div>
+      <div class="skill-box"><div class="skill-cat">HR &amp; Program Management</div><div class="skill-pills"><span class="sp">End-to-End HR Ops</span><span class="sp">Policy Drafting</span><span class="sp">Org Design</span><span class="sp">Training Design</span><span class="sp">Proposal Writing</span><span class="sp">Board Files &amp; G.O.s</span></div></div>
+      <div class="skill-box"><div class="skill-cat">Government Operations</div><div class="skill-pills"><span class="sp">Official Correspondence</span><span class="sp">Procurement Reports</span><span class="sp">Vendor Management</span><span class="sp">Work Orders</span><span class="sp">Approval Notes</span></div></div>
+      <div class="skill-box"><div class="skill-cat">Technical Foundations</div><div class="skill-pills"><span class="sp">SQL / PL/SQL</span><span class="sp">C / C++</span><span class="sp">Java Basics</span><span class="sp">AI Infrastructure</span><span class="sp">NVIDIA Certified</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Academic</span><h2 class="sec-title">Education</h2></div>
+    <div class="edu-list rv">
+      <div class="edu-row"><div class="edu-yr">2016 – 2018</div><div><div class="edu-deg">Master of Computer Science and Engineering</div><div class="edu-school">Aringar Anna Institute of Science &amp; Technology</div></div></div>
+      <div class="edu-row"><div class="edu-yr">2010 – 2013</div><div><div class="edu-deg">Bachelor of Computer Science and Engineering</div><div class="edu-school">Sri Krishna Engineering College</div></div></div>
+      <div class="edu-row"><div class="edu-yr">2007 – 2010</div><div><div class="edu-deg">Diploma in Computer Science and Engineering</div><div class="edu-school">IRT Polytechnic College</div></div></div>
+      <div class="edu-row"><div class="edu-yr">2006 – 2007</div><div><div class="edu-deg">Secondary School Certificate</div><div class="edu-school">Sri Natesan Mt. Hr. Sec. School</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Milestones</span><h2 class="sec-title">Achievements</h2></div>
+    <div class="ach-list rv">
+      <div class="ach-row"><span class="ach-pill ap-p">SaaS</span><div><div class="ach-name">Launched WorkMoat.life — Live Public Product</div><div class="ach-desc">Built and shipped a pay-first AI SaaS to the public — ₹9 CV diagnostic using Claude, Razorpay, and SendGrid. A rare example of a government-sector professional independently shipping a live B2C product.</div></div></div>
+      <div class="ach-row"><span class="ach-pill ap-p">Policy</span><div><div class="ach-name">IIR Policy &amp; Org Design — StartupTN</div><div class="ach-desc">Sole author of StartupTN's IIR Policy and Organisation Design framework — the foundational HR governance document covering all processes across the entire organisation.</div></div></div>
+      <div class="ach-row"><span class="ach-pill ap-r">Research</span><div><div class="ach-name">55-Staff AI Readiness Benchmark</div><div class="ach-desc">Designed and ran StartupTN's first organisation-wide AI readiness study — 55 staff assessed, 54% average automation exposure established as baseline, results used to shape the 2025–26 AI upskilling curriculum.</div></div></div>
+      <div class="ach-row"><span class="ach-pill ap-r">Deployed</span><div><div class="ach-name">3 Live Public Tools on Vercel</div><div class="ach-desc">WorkMoat.life, StartupTN Visitor Management System, and AI Readiness Report Generator — all publicly accessible, production-grade deployments built and maintained independently.</div></div></div>
+      <div class="ach-row"><span class="ach-pill ap-a">Cert</span><div><div class="ach-name">NVIDIA AI Infrastructure — Dec 2025</div><div class="ach-desc">AI Infrastructure and Operations Fundamentals · Authorized by NVIDIA Training via Coursera · Verify: coursera.org/verify/TAEJFNRMTO25</div></div></div>
+      <div class="ach-row"><span class="ach-pill ap-a">Cert</span><div><div class="ach-name">Generative AI in HR — Dec 2025</div><div class="ach-desc">Impact and Application of Gen AI · Board Infinity via Coursera · Verify: coursera.org/verify/6Y1NC2W64QSS</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="padding-bottom: 2rem;">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-eye">Connect</span><h2 class="sec-title">Get In Touch</h2></div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">Open to new roles, AI project collaborations, HR consulting, or a conversation about building smarter systems for organisations and government bodies in Tamil Nadu.</p>
+        <div class="contact-deets">
+          <div><div class="cd-lbl">Email</div><div class="cd-val"><a href="mailto:dhivyakrishnan19@gmail.com">dhivyakrishnan19@gmail.com</a></div></div>
+          <div><div class="cd-lbl">Phone</div><div class="cd-val"><a href="tel:+919940347154">+91 9940 347 154</a></div></div>
+          <div><div class="cd-lbl">Location</div><div class="cd-val">Kancheepuram District, Tamil Nadu — 600 048</div></div>
+          <div><div class="cd-lbl">Currently at</div><div class="cd-val">StartupTN · Project Lead, AI Readiness · Nandanam, Chennai</div></div>
+          <div><div class="cd-lbl">Live products</div><div class="cd-val"><a href="https://workmoat.life" target="_blank">workmoat.life</a> &nbsp;·&nbsp; <a href="https://startuptn-visitor-pi-one.vercel.app" target="_blank">startuptn-visitor.vercel.app</a></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="cf">
+          <div class="cf-row">
+            <div class="cf-grp"><label class="cf-lbl" for="fn">First Name *</label><input class="cf-inp" id="fn" type="text" placeholder="Arun" /></div>
+            <div class="cf-grp"><label class="cf-lbl" for="ln">Last Name *</label><input class="cf-inp" id="ln" type="text" placeholder="Prakash" /></div>
+          </div>
+          <div class="cf-grp"><label class="cf-lbl" for="em">Email *</label><input class="cf-inp" id="em" type="email" placeholder="arun@company.com" /></div>
+          <div class="cf-grp">
+            <label class="cf-lbl" for="sub">Subject *</label>
+            <select class="cf-sel" id="sub">
+              <option value="">Select a subject</option>
+              <option>Job Opportunity</option>
+              <option>AI Project Collaboration</option>
+              <option>HR / AI Consulting</option>
+              <option>General Message</option>
+            </select>
+          </div>
+          <div class="cf-grp"><label class="cf-lbl" for="msg">Message *</label><textarea class="cf-ta" id="msg" placeholder="Tell me about the opportunity or how I can help…"></textarea></div>
+          <button class="btn-fill" id="sbtn" onclick="doSend()" style="align-self:flex-start;">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-l">© 2025 Dhivyabharathi K · Kancheepuram, Tamil Nadu</div>
+  <div class="f-r">Project Lead, AI Readiness · <span>StartupTN</span></div>
+</footer>
+
+<script>
+
+/* ── THEME TOGGLE ── */
+(function() {
+  const btn = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  // Restore saved preference
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+})();
+
+/* ═══════════════════════════════════════
+   ANIMATION ENGINE
+═══════════════════════════════════════ */
+
+/* ── 1. SCROLL PROGRESS BAR ── */
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+  progressBar.style.width = pct + '%';
+}, { passive: true });
+
+/* ── 2. ACTIVE NAV HIGHLIGHT ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const navObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const match = document.querySelector('.nav-links a[href="#' + e.target.id + '"]');
+      if (match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => navObs.observe(s));
+
+/* ── 3. SCROLL REVEAL (all variants) ── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.rv, .rv-left, .rv-right, .rv-scale, .stagger, .sec-head').forEach(el => revealObs.observe(el));
+
+/* ── 4. BENTO REVEAL ── */
+const bentoObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); bentoObs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+const bentoEl = document.getElementById('bento-grid');
+if (bentoEl) bentoObs.observe(bentoEl);
+
+/* ── 5. COUNTER ANIMATION ── */
+function animateCounter(el, target, suffix, duration) {
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(ease * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bc').forEach(cell => {
+        const numEl = cell.querySelector('.bc-num');
+        if (!numEl) return;
+        const txt = numEl.textContent;
+        const match = txt.match(/^(\d+)(.*)$/);
+        if (!match) return;
+        const val = parseInt(match[1]);
+        const suf = match[2] || '';
+        animateCounter(numEl, val, suf, 1200);
+      });
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+if (bentoEl) counterObs.observe(bentoEl);
+
+
+
+/* ── 7. EXPERIENCE TABS with slide transition ── */
+document.querySelectorAll('.exp-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    const currentPane = document.querySelector('.exp-pane.on');
+    const nextPane = document.getElementById(t.dataset.p);
+    if (currentPane === nextPane) return;
+
+    // Fade out current
+    if (currentPane) {
+      currentPane.style.opacity = '0';
+      currentPane.style.transform = 'translateX(-12px)';
+      currentPane.style.transition = 'opacity 0.2s, transform 0.2s';
+      setTimeout(() => {
+        currentPane.classList.remove('on');
+        currentPane.style.opacity = '';
+        currentPane.style.transform = '';
+        currentPane.style.transition = '';
+        // Fade in next
+        nextPane.style.opacity = '0';
+        nextPane.style.transform = 'translateX(12px)';
+        nextPane.classList.add('on');
+        requestAnimationFrame(() => {
+          nextPane.style.transition = 'opacity 0.25s, transform 0.25s';
+          nextPane.style.opacity = '1';
+          nextPane.style.transform = 'translateX(0)';
+        });
+        setTimeout(() => {
+          nextPane.style.opacity = '';
+          nextPane.style.transform = '';
+          nextPane.style.transition = '';
+        }, 300);
+      }, 200);
+    }
+
+    document.querySelectorAll('.exp-tab').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+  });
+  t.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') t.click(); });
+});
+
+/* ── 8. SMOOTH SCROLL for nav links ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+/* ── 9. PROJECT CARD tilt micro-interaction ── */
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `translateY(-6px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+    card.style.transition = 'transform 0.1s, box-shadow 0.3s, border-color 0.3s';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s, border-color 0.3s';
+  });
+});
+
+/* ── 10. CONTACT FORM — EmailJS ── */
+if (window.emailjs) emailjs.init('doZI7GFkeHxyiG7xX');
+
+function doSend() {
+  const fn  = document.getElementById('fn').value.trim();
+  const ln  = document.getElementById('ln').value.trim();
+  const em  = document.getElementById('em').value.trim();
+  const sub = document.getElementById('sub').value;
+  const mg  = document.getElementById('msg').value.trim();
+  const btn = document.getElementById('sbtn');
+
+  // Validation
+  if (!fn || !em || !mg) {
+    btn.textContent = 'Fill required fields ✕';
+    btn.style.background = '#fb923c';
+    btn.style.color = '#07090e';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 2000);
+    return;
+  }
+
+  // Sending state
+  btn.textContent = 'Sending…';
+  btn.style.opacity = '0.7';
+  btn.style.pointerEvents = 'none';
+
+  const templateParams = {
+    from_name:  fn + (ln ? ' ' + ln : ''),
+    from_email: em,
+    subject:    sub || 'General Message',
+    message:    mg,
+    to_email:   'dhivyakrishnan19@gmail.com'
+  };
+
+  // Send notification to Dhivya — auto-reply to sender is handled
+  // via the Auto-Reply tab on template_g7hy4e4 in EmailJS dashboard
+  const notify = emailjs.send('service_oqj5ejq', 'template_g7hy4e4', templateParams);
+
+  Promise.all([notify])
+    .then(() => {
+      btn.textContent = 'Message Sent ✓';
+      btn.style.opacity = '1';
+      btn.style.background = '#4ade80';
+      btn.style.color = '#07090e';
+      btn.style.pointerEvents = 'none';
+      // Clear form
+      ['fn','ln','em','msg'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('sub').selectedIndex = 0;
+      // Reset button after 4s
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.style.pointerEvents = '';
+      }, 4000);
+    })
+    .catch((err) => {
+      console.error('EmailJS error — status:', err?.status, '| text:', err?.text, '| full:', JSON.stringify(err));
+      btn.textContent = 'Failed — try again';
+      btn.style.opacity = '1';
+      btn.style.background = '#fb923c';
+      btn.style.color = '#07090e';
+      btn.style.pointerEvents = '';
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3000);
+    });
+}
+</script>
+
+</body>
+</html>
